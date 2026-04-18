@@ -1,0 +1,392 @@
+/* ============================================================
+   A quiet record — shared stylesheet
+   ============================================================ */
+
+:root {
+  /* Palette — warm paper + ink */
+  --bg:         #f5f0e6;
+  --bg-alt:     #ede6d6;
+  --ink:        #1e1b16;
+  --ink-soft:   #5a5248;
+  --ink-faded:  #8a8276;
+  --accent:     #8f6641;
+  --accent-soft:#b38a64;
+  --rule:       #d9d0bf;
+
+  /* Type */
+  --display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --body:    'Newsreader', Georgia, 'Times New Roman', serif;
+
+  /* Rhythm */
+  --page-max:   640px;
+  --section-gap: 5rem;
+}
+
+/* ------------------------------------------------------------
+   Reset
+   ------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(143,102,65,0.05), transparent 55%),
+    radial-gradient(ellipse at 80% 100%, rgba(90,82,72,0.04), transparent 55%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.08  0 0 0 0 0.05  0 0 0 0.035 0'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>");
+  background-repeat: no-repeat, no-repeat, repeat;
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 380;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+::selection { background: rgba(143,102,65,0.22); }
+
+/* ------------------------------------------------------------
+   Layout
+   ------------------------------------------------------------ */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 5rem 1.75rem 6rem;
+}
+
+/* ------------------------------------------------------------
+   Mark (top-left monogram)
+   ------------------------------------------------------------ */
+.mark {
+  margin-bottom: 6rem;
+}
+.mark-text {
+  display: inline-block;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+}
+
+/* ------------------------------------------------------------
+   Hero
+   ------------------------------------------------------------ */
+.hero {
+  margin-bottom: 5.5rem;
+}
+.display {
+  font-family: var(--display);
+  font-weight: 300;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-size: clamp(3.25rem, 11vw, 6.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.022em;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+}
+.display .line { display: block; }
+.display .line--italic {
+  font-style: italic;
+  font-weight: 300;
+}
+.tagline {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+  line-height: 1.4;
+  color: var(--ink-soft);
+  margin-bottom: 2.75rem;
+  max-width: 32ch;
+}
+.intro {
+  font-size: 1.125rem;
+  line-height: 1.72;
+  color: var(--ink);
+  max-width: 56ch;
+}
+.dropcap {
+  float: left;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: "opsz" 72;
+  font-size: 4.75rem;
+  line-height: 0.82;
+  padding: 0.42rem 0.65rem 0 0;
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------------
+   Ornament (between sections)
+   ------------------------------------------------------------ */
+.ornament {
+  margin: 4.5rem 0;
+  text-align: center;
+  color: var(--ink-faded);
+  font-family: var(--display);
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+}
+.ornament::before,
+.ornament::after {
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 1px;
+  background: var(--rule);
+  vertical-align: middle;
+  margin: 0 1rem;
+}
+
+/* ------------------------------------------------------------
+   Sections (on landing)
+   ------------------------------------------------------------ */
+.section {
+  max-width: 58ch;
+}
+.section-head {
+  margin-bottom: 1.5rem;
+}
+.numeral {
+  display: block;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.6rem;
+}
+.section-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-variation-settings: "opsz" 72, "SOFT" 30;
+  font-size: clamp(2rem, 4.6vw, 2.625rem);
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+.section p {
+  margin-bottom: 1.4rem;
+  color: var(--ink);
+}
+
+/* ------------------------------------------------------------
+   Read-more link
+   ------------------------------------------------------------ */
+.readmore {
+  font-family: var(--body);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.02rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.readmore:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+.readmore .arrow {
+  display: inline-block;
+  transition: transform 240ms ease;
+  margin-left: 0.15rem;
+}
+.readmore:hover .arrow { transform: translateX(3px); }
+
+/* ------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------ */
+.site-foot {
+  margin-top: 7.5rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+.foot-line {
+  font-style: italic;
+  margin-bottom: 0.85rem;
+}
+.foot-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.foot-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.foot-links .sep {
+  color: var(--ink-faded);
+  margin: 0 0.55rem;
+}
+.copyright {
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--ink-faded);
+}
+
+/* ------------------------------------------------------------
+   Subpages
+   ------------------------------------------------------------ */
+.subpage .back {
+  display: inline-block;
+  font-family: var(--body);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-bottom: 5rem;
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+.subpage .back:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.sub-head { margin-bottom: 3.5rem; }
+.sub-head .section-title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  line-height: 1.02;
+}
+.sub-head .numeral { margin-bottom: 0.75rem; }
+
+.prose { max-width: 58ch; }
+.prose p + p { margin-top: 1.25rem; }
+.prose h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 3rem 0 0.75rem;
+  letter-spacing: -0.005em;
+}
+.prose blockquote {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin: 2.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent-soft);
+  max-width: 50ch;
+}
+.prose em { font-style: italic; }
+.prose a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+.prose a:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.entry {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.entry:last-child { border-bottom: none; }
+.entry-meta {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+.entry h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-variation-settings: "opsz" 72;
+  font-size: 1.85rem;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 1.1rem;
+}
+
+.placeholder {
+  font-style: italic;
+  color: var(--ink-soft);
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-alt);
+  border-left: 2px solid var(--accent-soft);
+  border-radius: 2px;
+  max-width: 58ch;
+}
+.placeholder code {
+  font-family: 'Courier New', monospace;
+  font-style: normal;
+  background: rgba(143,102,65,0.09);
+  padding: 0.1rem 0.35rem;
+  font-size: 0.92em;
+  border-radius: 2px;
+}
+
+/* ------------------------------------------------------------
+   Reveal animation (gentle, once)
+   ------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: reveal 900ms cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+.reveal-1 { animation-delay: 100ms; }
+.reveal-2 { animation-delay: 220ms; }
+.reveal-3 { animation-delay: 340ms; }
+.reveal-4 { animation-delay: 460ms; }
+
+@keyframes reveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ------------------------------------------------------------
+   Mobile
+   ------------------------------------------------------------ */
+@media (max-width: 560px) {
+  .page { padding: 3.25rem 1.25rem 4rem; }
+  .mark { margin-bottom: 3.75rem; }
+  .hero { margin-bottom: 3.5rem; }
+  .display { letter-spacing: -0.018em; }
+  .dropcap { font-size: 3.75rem; padding: 0.35rem 0.55rem 0 0; }
+  .ornament { margin: 3rem 0; }
+  .ornament::before,
+  .ornament::after { width: 1.5rem; margin: 0 0.6rem; }
+  .site-foot { margin-top: 5rem; }
+  .subpage .back { margin-bottom: 3rem; }
+  .sub-head { margin-bottom: 2.5rem; }
+}

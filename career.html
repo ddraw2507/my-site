@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Work — Nguyễn Doãn Hòa</title>
+  <meta name="description" content="A longer account of what I do for a living — leading a small BIM team in Hanoi, and the quieter work of building tools that save time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<main class="page subpage">
+
+  <a href="index.html" class="back reveal reveal-1">← Back to the record</a>
+
+  <header class="sub-head reveal reveal-2">
+    <span class="numeral">iii.</span>
+    <h1 class="section-title">The Work</h1>
+  </header>
+
+  <div class="prose reveal reveal-3">
+
+    <p>
+      I am a BIM infrastructure engineer. The word <em>BIM</em> means many things, but the shortest honest translation is: the careful, three-dimensional drawings that come before anyone builds anything expensive. Roads, bridges, tunnels, train stations. Every structure you've walked through that didn't fall down started as a drawing by someone like me, or someone my team helped.
+    </p>
+
+    <p>
+      I work at <a href="https://www.socotec.com" target="_blank" rel="noopener">Socotec Vietnam</a>, in Hanoi. We're the offshoring arm for Socotec's European offices — Italy, mostly, but also Germany, France, Spain, Portugal, the UK. The work goes the other direction from what most people imagine: European engineers hand us problems, and we solve them from a small office a few hours north of the equator.
+    </p>
+
+    <h3>How the team came to be</h3>
+
+    <p>
+      I joined in late 2022 as the first BIM person. There wasn't a team yet, just a desk and a license for Revit. The arrangement was simple: if the work came in, we'd hire. Three years later there are seven of us — a mix of BIM modelers, structural engineers, and a patient colleague who handles monitoring data from sensors on bridges and buildings across Italy.
+    </p>
+
+    <blockquote>
+      The thing about growing a team is that it has almost nothing to do with scale and almost everything to do with trust. You hire the second person and hope they don't quit. Then the third. Then one day you look up and there are seven, and you realize the hardest part wasn't growing — it was not breaking the small thing that worked when it was just two.
+    </blockquote>
+
+    <h3>What we actually do</h3>
+
+    <p>
+      On a given week we might be modeling a tunnel section for a client in Ferrara, processing a point cloud from a bridge survey in Avellino, running clash detection on a Milanese metro extension, or updating families in a template library for a partner office trying to standardize their workflow. None of it is glamorous. All of it matters to someone who has to build something real.
+    </p>
+
+    <h3>The DDRAW project</h3>
+
+    <p>
+      My evenings, lately, have gone to a small ecosystem of AutoCAD plugins I've been writing in C#. They all live under a three-letter name: <em>DDRAW</em>, a tip of the hat to the word <em>draftsman</em> and also to the fact that naming things is hard. The architecture is simple — a single loader (<code style="font-family:monospace;font-size:0.9em;background:rgba(143,102,65,0.09);padding:0.1rem 0.35rem;border-radius:2px;">SocotecLoader.dll</code>) reads a plugin list and brings the tools into a shared ribbon tab.
+    </p>
+
+    <p>
+      So far there's <em>QuickCorner</em> (sharp-corner fillets), <em>MultiBreak</em> (breaking many entities at a point), <em>PropExport</em> (round-tripping properties through Excel), and <em>DDSlope</em> (slope annotations). They're small tools. Each one saves my team an hour or two a week. Collectively, they've given us back an afternoon every week — which is, in engineering terms, a very decent return.
+    </p>
+
+    <h3>What I care about at work</h3>
+
+    <p>
+      I care about incremental progress over grand gestures. I care about writing things down so the next person doesn't have to rediscover them. I care about my team enjoying their Thursdays. And I care, quietly, about the slow accumulation of small improvements — because I've come to believe that is how most good things actually get built.
+    </p>
+
+    <p>
+      If you'd like to talk about any of it — automation for AEC, scan-to-BIM workflows, the strange pleasures of plugin development, or running a small offshoring team — you can <a href="mailto:you@example.com">write to me</a>.
+    </p>
+
+  </div>
+
+</main>
+
+</body>
+</html>
