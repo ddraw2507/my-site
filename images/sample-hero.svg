@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Placeholder landscape — layered mountain silhouettes under a pale dawn sky">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3f3f1"/>
+      <stop offset="55%" stop-color="#ecebe7"/>
+      <stop offset="100%" stop-color="#dad8d2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1180" cy="260" r="70" fill="#fafaf8" opacity="0.9"/>
+  <path d="M0,640 L180,500 L360,560 L540,430 L740,520 L940,440 L1140,510 L1340,460 L1600,540 L1600,900 L0,900 Z" fill="#c8c6c0" opacity="0.95"/>
+  <path d="M0,720 L140,620 L320,670 L500,590 L720,660 L920,590 L1120,650 L1320,600 L1520,670 L1600,640 L1600,900 L0,900 Z" fill="#8f8d88" opacity="0.92"/>
+  <path d="M0,820 L260,760 L520,790 L780,765 L1060,795 L1340,770 L1600,785 L1600,900 L0,900 Z" fill="#3f3e3b" opacity="0.95"/>
+  <text x="40" y="870" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#ffffff" opacity="0.55" letter-spacing="2">PLACEHOLDER · 1600 × 900</text>
+</svg>
