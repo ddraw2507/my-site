@@ -279,7 +279,7 @@ body {
   font-family: var(--sans);
   font-style: normal;
   font-weight: 400;
-  font-size: 1.1875rem;
+  font-size: 1rem;
   line-height: 1.55;
   color: var(--ink);
   margin: 3rem 0;
@@ -344,6 +344,71 @@ body {
   padding: 0.1rem 0.4rem;
   font-size: 0.875em;
   border-radius: 3px;
+}
+
+/* ------------------------------------------------------------
+   Post images — figures, captions, galleries, wide breakouts
+   ------------------------------------------------------------ */
+
+/* Any image inside prose or a post figure: fluid, no overflow */
+.prose img,
+.post-hero img,
+.post-figure img,
+.post-wide img,
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg-alt);
+}
+
+/* Hero image, sits at the top of a post, a touch wider than the text */
+.post-hero {
+  margin: 0 0 4rem;
+  max-width: 920px;
+}
+
+/* Inline figure inside the prose — stays within the reading column */
+.post-figure {
+  margin: 2.75rem 0;
+}
+
+/* Wide breakout figure — for panoramas and landscapes */
+.post-wide {
+  margin: 3rem 0;
+  max-width: 920px;
+}
+
+/* Caption styling — quiet, small, mono, unobtrusive */
+.post-hero figcaption,
+.post-figure figcaption,
+.post-wide figcaption,
+.gallery figcaption,
+.prose figure figcaption {
+  margin-top: 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--ink-faded);
+  letter-spacing: 0.02em;
+}
+
+/* Two-up gallery by default; add class="gallery gallery-3" for three-up */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.gallery.gallery-3 { grid-template-columns: repeat(3, 1fr); }
+.gallery figure { margin: 0; }
+.gallery figcaption { margin-top: 0.5rem; }
+
+@media (max-width: 640px) {
+  .gallery,
+  .gallery.gallery-3 { grid-template-columns: 1fr; gap: 0.75rem; }
+  .post-hero,
+  .post-wide { max-width: 100%; }
 }
 
 /* ------------------------------------------------------------
