@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When in Taipei - Nguyễn Doãn Hòa</title>
+  <meta name="description" content="When in Taipei, Taiwan, 2026" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<main class="page subpage">
+
+  <a href="index.html" class="back reveal reveal-1">← Back to the record</a>
+
+  <header class="sub-head reveal reveal-2">
+    <p class="entry-meta">Journal · 19 April 2026</p>
+    <h1 class="section-title">A morning in the Dolomites</h1>
+  </header>
+
+  <!-- Hero image — breaks out a little wider than the text column -->
+  <figure class="post-hero reveal reveal-3">
+    <img src="images/sample-hero.svg" alt="Layered mountain silhouettes under a pale dawn sky." />
+    <figcaption>First light near the Geisler Alm. Replace this with your own photo.</figcaption>
+  </figure>
+
+  <div class="prose reveal reveal-3">
+
+    <p>
+      A sample post, kept deliberately short, so you can see how images, captions, and galleries fit alongside the text without crowding it. Duplicate this file, rename it (for example <code>post-dolomites.html</code>), and edit the words.
+    </p>
+
+    <p>
+      The morning began an hour before sunrise, with a thermos of tea and a walk uphill that felt longer than it was. The ridge opened after a final switchback; the sky, when it finally arrived, arrived all at once. It's the kind of view that makes you write nothing down and take too many photographs.
+    </p>
+
+    <h3>An inline figure with a caption</h3>
+
+    <p>
+      For any image that should have a caption under it, wrap it in a <code>&lt;figure&gt;</code> with a <code>&lt;figcaption&gt;</code>. The figure sits in the normal flow of the prose — the image stays within the reading column so the eye doesn't have to re-settle.
+    </p>
+
+    <figure class="post-figure">
+      <img src="images/sample-1.svg" alt="A solitary tree on a quiet ridge." />
+      <figcaption>The single tree at the edge — a quiet punctuation mark in the landscape.</figcaption>
+    </figure>
+
+    <p>
+      If you'd rather skip the caption, you can drop a plain <code>&lt;img&gt;</code> tag between two paragraphs. The CSS sizes it gracefully either way.
+    </p>
+
+    <h3>A small gallery</h3>
+
+    <p>
+      When two photos belong together, wrap them in <code>&lt;div class="gallery"&gt;</code>. On phones the gallery quietly stacks into a single column — no extra work needed.
+    </p>
+
+    <div class="gallery">
+      <figure>
+        <img src="images/sample-1.svg" alt="A single tree on a ridge." />
+        <figcaption>Left: the ridge at first light.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/sample-2.svg" alt="Misty layered hills receding into the distance." />
+        <figcaption>Right: the valley, still holding mist.</figcaption>
+      </figure>
+    </div>
+
+    <h3>A wide image, for a bigger breath</h3>
+
+    <p>
+      Add the class <code>post-wide</code> to a figure and it breaks out beyond the prose width — good for panoramas and landscapes that deserve more space.
+    </p>
+
+    <figure class="post-wide">
+      <img src="images/sample-hero.svg" alt="A wider landscape, breaking out of the reading column." />
+      <figcaption>A wider breath, when the frame calls for it.</figcaption>
+    </figure>
+
+    <p>
+      That's the whole pattern — <em>figure + img + figcaption</em> inside the prose, and a gallery for grouped shots. The typography, margins, and the reveal animation are all already set up in <code>styles.css</code>, so you don't need to touch the CSS to make a new post.
+    </p>
+
+    <p class="placeholder" style="margin-top:2.5rem;">
+      <strong>To use this template:</strong> duplicate <code>post-template.html</code>, rename it (for example <code>post-dolomites-2026.html</code>), and change the title, date, and text. Drop your images into the <code>images/</code> folder and update each <code>src="images/…"</code> to match the filename. Always fill in <code>alt="…"</code> with a short plain-English description — that keeps the site accessible for screen readers and search engines.
+    </p>
+
+  </div>
+
+</main>
+
+</body>
+</html>
