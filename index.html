@@ -10,118 +10,169 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="home">
 
-<main class="page">
+<main class="page page--wide">
 
-  <header class="mark reveal reveal-1" aria-label="Site mark">
+  <header class="topbar reveal reveal-1">
+    <a class="logo" href="index.html" aria-label="Home">h<span>.</span></a>
     <span class="mark-text">Hi / Ciao / Hola / Hallo / 你好 / こんにちは</span>
   </header>
 
   <section class="hero reveal reveal-2">
-    <h1 class="display">
-      <span class="line">Nguyễn</span>
-      <span class="line line--italic">Doãn Hòa</span>
-    </h1>
-    <p class="tagline">Engineer, traveler, builder of small, unhurried things.</p>
-    <p class="intro">
-      <span class="dropcap">A</span> quiet record - part journal, part portfolio - of the work I've been doing, the places I've walked, and the thoughts I keep returning to. Written slowly, from an apartment in Hanoi, for anyone who's curious.
-    </p>
+    <div class="hero-copy">
+      <button class="eyebrow" type="button" aria-label="Wave hello">
+        <span class="wave" aria-hidden="true">👋</span> Xin chào, I'm
+      </button>
+      <h1 class="display" data-split>
+        <span class="line">Nguyễn</span>
+        <span class="line line--italic">Doãn Hòa</span>
+      </h1>
+      <p class="tagline">
+        Engineer, traveler, builder of small, unhurried things.
+        <br />Right now I'm a <span class="rotator" data-words="bridge modeler|BIM team lead|solo traveler|mountain walker|karaoke enthusiast|builder of small things">BIM team lead</span>
+      </p>
+      <p class="intro">
+        <span class="dropcap">A</span> quiet record - part journal, part portfolio - of the work I've been doing, the places I've walked, and the thoughts I keep returning to. Written slowly, from an apartment in Hanoi, for anyone who's curious.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn--primary magnetic" href="#explore">Explore the record <span aria-hidden="true">↓</span></a>
+        <a class="btn btn--ghost magnetic" href="mailto:ngdoanhoa@gmail.com">Say hi <span aria-hidden="true">✉</span></a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="blob"></div>
+      <div class="blob blob--2"></div>
+      <span class="sticker sticker--1">🌉</span>
+      <span class="sticker sticker--2">🏔️</span>
+      <span class="sticker sticker--3">🎤</span>
+      <span class="sticker sticker--4">✈️</span>
+      <span class="sticker sticker--5">📐</span>
+      <div class="spin-badge">
+        <svg viewBox="0 0 120 120">
+          <defs>
+            <path id="badge-circle" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0" />
+          </defs>
+          <text><textPath href="#badge-circle" textLength="272" lengthAdjust="spacing">BASED IN HANOI ✦ ENGINEER ✦ TRAVELER ✦</textPath></text>
+        </svg>
+        <span class="spin-badge-core">📍</span>
+      </div>
+    </div>
   </section>
 
-  <div class="ornament reveal reveal-3" aria-hidden="true">❦</div>
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee marquee--a">
+      <div class="marquee-track">
+        <span>BIM ✦ Bridges ✦ Tunnels ✦ Dolomites ✦ Taipei ✦ Lake Garda ✦ Hiking ✦ Karaoke ✦ Hanoi ✦&nbsp;</span>
+        <span>BIM ✦ Bridges ✦ Tunnels ✦ Dolomites ✦ Taipei ✦ Lake Garda ✦ Hiking ✦ Karaoke ✦ Hanoi ✦&nbsp;</span>
+      </div>
+    </div>
+    <div class="marquee marquee--b">
+      <div class="marquee-track">
+        <span>Learn something new every day ★ Build incrementally ★ Choose peace ★ Walk slowly ★&nbsp;</span>
+        <span>Learn something new every day ★ Build incrementally ★ Choose peace ★ Walk slowly ★&nbsp;</span>
+      </div>
+    </div>
+  </div>
 
-  <article class="section reveal reveal-4">
-    <div class="section-head">
-      <span class="numeral">i.</span>
+  <section class="stats" aria-label="A few numbers">
+    <div class="stat stat--violet"><b><span data-count="6">6</span>+</b><span>years in the construction industry</span></div>
+    <div class="stat stat--pink"><b><span data-count="5">5</span></b><span>European countries my team serves</span></div>
+    <div class="stat stat--yellow"><b>1→<span data-count="5">5</span></b><span>a team of one that became five</span></div>
+    <div class="stat stat--lime"><b><span data-count="3">3</span></b><span>trips written up, more coming</span></div>
+  </section>
+
+  <div class="bento-head" id="explore">
+    <h2 class="bento-title">Pick a door <span aria-hidden="true">🚪</span></h2>
+    <p class="bento-sub">Six rooms, one record. Hover around, click anywhere on a card.</p>
+  </div>
+
+  <div class="bento">
+
+    <article class="section card card--who">
+      <div class="card-top">
+        <span class="numeral">i.</span>
+        <span class="card-emoji" aria-hidden="true">🙋</span>
+      </div>
       <h2 class="section-title">Who I Am</h2>
-    </div>
-    <p>
-      Born in the late ’90s, shaped by life in central Vietnam, and now based in the capital. Trained as an infrastructure engineer - in other words, I spend my days modeling bridges, roads, and tunnels. Beyond work, I stick to quiet rituals: unhurried walks, lingering dinners, and conversations that feel complete when they end.
-    </p>
-    <a href="about.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
-  </article>
+      <p>
+        Born in the late ’90s, shaped by life in central Vietnam, and now based in the capital. Trained as an infrastructure engineer - in other words, I spend my days modeling bridges, roads, and tunnels. Beyond work, I stick to quiet rituals: unhurried walks, lingering dinners, and conversations that feel complete when they end.
+      </p>
+      <a href="about.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
+    </article>
 
-  <div class="ornament" aria-hidden="true">❦</div>
-
-  <article class="section">
-    <div class="section-head">
-      <span class="numeral">ii.</span>
+    <article class="section card card--mile">
+      <div class="card-top">
+        <span class="numeral">ii.</span>
+        <span class="card-emoji" aria-hidden="true">🏁</span>
+      </div>
       <h2 class="section-title">Milestones</h2>
-    </div>
-    <p>
-      A short ledger of the moments that shifted something. A first degree. A first real job. The morning I was asked to lead a team of one, which became a team of five. The first time I saw the Dolomites and understood why people write poems about mountains. Nothing dramatic - just the small pivots that, added together, make the shape of a life.
-    </p>
-    <a href="milestones.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
-  </article>
+      <p>
+        A short ledger of the moments that shifted something. A first degree. A first real job. The morning I was asked to lead a team of one, which became a team of five. The first time I saw the Dolomites and understood why people write poems about mountains. Nothing dramatic - just the small pivots that, added together, make the shape of a life.
+      </p>
+      <a href="milestones.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
+    </article>
 
-  <div class="ornament" aria-hidden="true">❦</div>
-
-  <article class="section">
-    <div class="section-head">
-      <span class="numeral">iii.</span>
+    <article class="section card card--work">
+      <div class="card-top">
+        <span class="numeral">iii.</span>
+        <span class="card-emoji" aria-hidden="true">🏗️</span>
+      </div>
       <h2 class="section-title">The Work</h2>
-    </div>
-    <p>
-      I lead a small BIM team in Hanoi, serving clients across Europe - Italy mostly, but also Germany, France, Spain, the UK. Six years into the construction industry, I’ve come to see two very different versions of myself: the first three years and everything that followed.
+      <p>
+        I lead a small BIM team in Hanoi, serving clients across Europe - Italy mostly, but also Germany, France, Spain, the UK. Six years into the construction industry, I’ve come to see two very different versions of myself: the first three years and everything that followed. What used to take me eight hours now takes four. Not because I do less but because I’ve learned to work faster, smarter, and more reliably. It sounds simple. It wasn’t.
+      </p>
+      <a href="career.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
+    </article>
 
-Back then, I was all drive-weekends at the office, learning relentlessly, giving without expecting anything in return. But the next three years reshaped how I think. I stopped spending time on what doesn’t matter. Time became my most valuable asset. And the goal? Learn something new, every single day.
-
-What used to take me eight hours now takes four. Not because I do less but because I’ve learned to work faster, smarter, and more reliably, automating the repetitive to focus on what truly creates value. The other four hours? That’s where I invest in myself-learning, reading, exploring, or simply recharging.
-
-It sounds simple. It wasn’t.
-    </p>
-    <a href="career.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
-  </article>
-
-  <div class="ornament" aria-hidden="true">❦</div>
-
-  <article class="section">
-    <div class="section-head">
-      <span class="numeral">iv.</span>
+    <article class="section card card--travel">
+      <div class="card-top">
+        <span class="numeral">iv.</span>
+        <span class="card-emoji" aria-hidden="true">🧭</span>
+      </div>
       <h2 class="section-title">Places, Walked</h2>
-    </div>
-    <p>
-      Italy, in the summer of 2025: a working trip that turned into a wandering one. Avellino and Ferrara for the offices; then south to Rome and north to the Dolomites, where the Geisler Alm looked back at me like a wall of prayer. A notebook of photographs, detours, small meals, and recommendations for the next traveler.
-    </p>
-    <a href="travel.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
-  </article>
+      <p>
+        Italy, in the summer of 2025: a working trip that turned into a wandering one. Avellino and Ferrara for the offices; then south to Rome and north to the Dolomites, where the Geisler Alm looked back at me like a wall of prayer.
+      </p>
+      <a href="travel.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
+    </article>
 
-  <div class="ornament" aria-hidden="true">❦</div>
-
-  <article class="section">
-    <div class="section-head">
-      <span class="numeral">v.</span>
+    <article class="section card card--notes">
+      <div class="card-top">
+        <span class="numeral">v.</span>
+        <span class="card-emoji" aria-hidden="true">📝</span>
+      </div>
       <h2 class="section-title">Notes to Myself</h2>
-    </div>
-    <p>
-      Short essays and fragments - on building things incrementally, on choosing peace over drama, on why external validation is a thin meal. Written for myself first, published in case any of it turns out to be useful to someone else.
-    </p>
-    <a href="thoughts.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
-  </article>
+      <p>
+        Short essays and fragments - on building things incrementally, on choosing peace over drama, on why external validation is a thin meal.
+      </p>
+      <a href="thoughts.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
+    </article>
 
-  <div class="ornament" aria-hidden="true">❦</div>
-
-  <article class="section">
-    <div class="section-head">
-      <span class="numeral">vi.</span>
+    <article class="section card card--hobby">
+      <div class="card-top">
+        <span class="numeral">vi.</span>
+        <span class="card-emoji" aria-hidden="true">🎶</span>
+      </div>
       <h2 class="section-title">Off-Hours</h2>
-    </div>
-    <p>
-      Hiking when I can manage it, karaoke when I can't. A few small, unhurried pleasures that keep the busier hours in balance.
-    </p>
-    <a href="hobbies.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
-  </article>
+      <p>
+        Hiking when I can manage it, karaoke when I can't. A few small, unhurried pleasures that keep the busier hours in balance.
+      </p>
+      <a href="hobbies.html" class="readmore">Continue reading <span class="arrow" aria-hidden="true">→</span></a>
+    </article>
+
+  </div>
 
   <footer class="site-foot">
-    <p class="foot-line">Written slowly, from Hanoi, over many mornings.</p>
+    <p class="foot-kicker">Got a bridge, a trip, or a karaoke song in mind?</p>
+    <p class="foot-line">Let's talk <span class="wave" aria-hidden="true">👋</span></p>
     <p class="foot-links">
-      <a href="mailto:ngdoanhoa@gmail.com">Email</a>
-      <span class="sep">·</span>
-      <a href="https://www.instagram.com/x97ccd/" target="_blank" rel="noopener">Instagram</a>
-      <span class="sep">·</span>
-      <a href="https://www.linkedin.com/in/hoa-nguyen-doan/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="magnetic" href="mailto:ngdoanhoa@gmail.com">✉ Email</a>
+      <a class="magnetic" href="https://www.instagram.com/x97ccd/" target="_blank" rel="noopener">◎ Instagram</a>
+      <a class="magnetic" href="https://www.linkedin.com/in/hoa-nguyen-doan/" target="_blank" rel="noopener">in LinkedIn</a>
     </p>
+    <p class="foot-note">Written slowly, from Hanoi, over many mornings.</p>
     <p class="copyright">© 2026 Nguyễn Doãn Hòa</p>
   </footer>
 
